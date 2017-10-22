@@ -411,10 +411,10 @@ namespace Serilog.Sinks.MSSqlServer
         /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
+            base.Dispose(disposing);
+            
             if (_eventsTable != null)
                 _eventsTable.Dispose();
-
-            base.Dispose(disposing);
         }
     }
 }
